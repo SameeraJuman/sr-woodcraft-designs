@@ -12,6 +12,8 @@ function goToContact() {
     setTimeout(() => {
         const el = document.getElementById("contact-section");
         if (el) el.scrollIntoView({ behavior: "smooth" });
+        document.querySelectorAll(".nav-links a").forEach((a) => a.classList.remove("nav-active"));
+        document.querySelectorAll('.nav-links a[data-page="contact"]').forEach((a) => a.classList.add("nav-active"));
     }, 50);
 }
 
