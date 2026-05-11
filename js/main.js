@@ -43,16 +43,40 @@ function toggleFaq(item) {
 
 function submitForm() {
     const fname = document.getElementById("fname").value.trim();
+    const lname = document.getElementById("lname").value.trim();
     const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
     const product = document.getElementById("product").value;
+    const occasion = document.getElementById("occasion").value;
     const details = document.getElementById("details").value.trim();
+    const deadline = document.getElementById("deadline").value.trim();
+    const materials = [];
+    if (document.getElementById("mat1").checked) materials.push("Natural wood");
+    if (document.getElementById("mat2").checked) materials.push("Acrylic / Perspex");
+    if (document.getElementById("mat3").checked) materials.push("No preference");
+
     if (!fname || !email || !product || !details) {
         alert("Please fill in all required fields (marked with *).");
         return;
     }
-    document.getElementById("formSuccess").style.display = "block";
-    document.querySelector("#orderForm .submit-btn").disabled = true;
-    document.querySelector("#orderForm .submit-btn").style.opacity = "0.5";
+
+    const lines = [
+        "Hi SR Woodcraft & Designs! I'd like to place a custom order.",
+        "",
+        "*Name:* " + fname + (lname ? " " + lname : ""),
+        "*Email:* " + email,
+        phone ? "*Phone:* " + phone : null,
+        "*Type of Piece:* " + product,
+        occasion ? "*Occasion:* " + occasion : null,
+        materials.length ? "*Materials:* " + materials.join(", ") : null,
+        deadline ? "*Deadline:* " + deadline : null,
+        "",
+        "*Details:*",
+        details,
+    ].filter((l) => l !== null);
+
+    const message = encodeURIComponent(lines.join("\n"));
+    window.open("https://wa.me/5926154413?text=" + message, "_blank");
 }
 
 function submitContact() {
