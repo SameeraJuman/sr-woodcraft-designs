@@ -3,6 +3,8 @@ function showPage(id) {
     const page = document.getElementById("page-" + id);
     if (page) page.classList.add("active");
     window.scrollTo({ top: 0, behavior: "smooth" });
+    document.querySelectorAll(".nav-links a").forEach((a) => a.classList.remove("nav-active"));
+    document.querySelectorAll(`.nav-links a[data-page="${id}"]`).forEach((a) => a.classList.add("nav-active"));
 }
 
 function goToContact() {
@@ -64,6 +66,22 @@ function submitContact() {
     document.querySelector(".contact-right .submit-btn").style.opacity = "0.5";
 }
 
+function openLightbox(src) {
+    document.getElementById("lightbox-img").src = src;
+    document.getElementById("lightbox").classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").classList.remove("open");
+    document.getElementById("lightbox-img").src = "";
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") closeLightbox();
+});
+
 window.addEventListener("scroll", function () {
     const btn = document.getElementById("scrollTop");
     if (btn) btn.classList.toggle("visible", window.scrollY > 300);
@@ -72,4 +90,12 @@ window.addEventListener("scroll", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const yearEl = document.getElementById("copyright-year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    document.querySelectorAll(".gallery-placeholder").forEach(function (el) {
+        const style = el.getAttribute("style") || "";
+        const match = style.match(/url\(['"]?([^'")\s]+)['"]?\)/);
+        if (match) {
+            el.addEventListener("click", function () { openLightbox(match[1]); });
+        }
+    });
 });
