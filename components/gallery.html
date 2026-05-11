@@ -1,0 +1,467 @@
+<section class="page" id="page-gallery">
+  <div class="page-hero">
+    <p class="page-hero-label">Our portfolio</p>
+    <h1 class="page-hero-title">Our <em>Work</em></h1>
+    <p class="page-hero-sub">Browse a selection of our work.</p>
+  </div>
+
+  <div class="gallery-filter">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All Work</button>
+    <button class="filter-btn" onclick="filterGallery('wood', this)">Wood Carvings</button>
+    <button class="filter-btn" onclick="filterGallery('puzzle', this)">Map Puzzles</button>
+    <button class="filter-btn" onclick="filterGallery('acrylic', this)">Acrylic & Light</button>
+    <button class="filter-btn" onclick="filterGallery('islamic', this)">Islamic Art</button>
+    <button class="filter-btn" onclick="filterGallery('custom', this)">Custom</button>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1YwPPeJX_fdd75FvLsfqrXafm-3Qu2Q5z');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Table</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1-8WAgeZ-Om0moUYWOrrtrdvEKqyYN4Ys');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1uPSycQZvMxm2awe9qDPYrGlHPjrsqFiT');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1id6S7AASvhltRSUZ3-PGnf6cf5keAXwV');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=16hK3vk9cQ8cL2a1vRhXOIRP1zNRp50An');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Sign</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1fdozOZLQmrymBNT6_P4zXGCrA-guVL-b');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1b1EknugjYb22-K6nSi3IUyrldNHnQMC2');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Saw Craft</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1yPauze3N9zkjzKbuRzygjZIhDFT0ENxQ');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Perspex Islamic Chain</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1rc8f7UibE-H6f-rVfMyLUgypBN785pYx');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Light Art</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1r4tYYIJ7BlIb13GHF_9y6ODOVA03-L3R');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Design</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1OO0leVnt9KKhgnH2BvfVY7RQuFTX-JaI');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=11l8vbF3XHFnasdJw7aI9PtEHOmoAd39i');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Tags</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1_BKQHqEwcWYrpXoQNo6m-nGZ8gP9YXTH');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1Ca5_D-lpKNVmKNUChNi9GJGqkP2g6fR_');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1LQV9gppH55EVLNQbsOD8ywLtlzfLSGf3');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=18qV3_i391plVLxwhOxptR46Qp0I4Xqly');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1K89WpiXRy9bmWWzqW2Esutg8u36PPRMv');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1wE0ykBWX1tv582USxUT0hM4fD7fpduLQ');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Lantern</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1zpIKUi8shSteuVOrDK7JsZ_XujL-c99E');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">L-Desk</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1BDh7E6s1TJsR7NNrRyOvoIM6qSH_ghPX');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">L-Desk</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1DZJ3igYdv5l4gyrQ4xaqX8KoWseEqTws');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1ZKQH-ccwOCgxiPF8Pg4eqP6EHLU3Aq9h');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1axfHwc-LRzrwYvdejum5cGtjs4ITH564');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1LaR-F9A6X4S-wLz0IZ8HI0wFAdSjannk');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1TkAiMUPxgNfOO1x3yIhdD_LiBInx8z2e');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1fA3T4-RxNlgn2Cwi2XZlTlZiKejFsMvk');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="islamic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1vzaIxIFrOpEpJXVDf3PjTrChJSqATrjV');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Islamic Art</div>
+        <div class="gallery-caption-tag">Islamic Art</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=17yVWedF19cDhArSXrdUAqmd6eKUdTeHP');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1-14i-9DSK2-89xZxE22bdFGtJi-qygTb');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Design</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=16evdKSB6hGNimlakgiLvx-zBBn9E3WCs');background-size:cover;background-position:center;"></div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Number Plate</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+  </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Table</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1-8WAgeZ-Om0moUYWOrrtrdvEKqyYN4Ys&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1uPSycQZvMxm2awe9qDPYrGlHPjrsqFiT&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1id6S7AASvhltRSUZ3-PGnf6cf5keAXwV&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Stamp</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=16hK3vk9cQ8cL2a1vRhXOIRP1zNRp50An&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Sign</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1fdozOZLQmrymBNT6_P4zXGCrA-guVL-b&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1b1EknugjYb22-K6nSi3IUyrldNHnQMC2&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Saw Craft</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1yPauze3N9zkjzKbuRzygjZIhDFT0ENxQ&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Perspex Islamic Chain</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1rc8f7UibE-H6f-rVfMyLUgypBN785pYx&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Light Art</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1r4tYYIJ7BlIb13GHF_9y6ODOVA03-L3R&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Design</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1OO0leVnt9KKhgnH2BvfVY7RQuFTX-JaI&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=11l8vbF3XHFnasdJw7aI9PtEHOmoAd39i&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Tags</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1_BKQHqEwcWYrpXoQNo6m-nGZ8gP9YXTH&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1Ca5_D-lpKNVmKNUChNi9GJGqkP2g6fR_&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1LQV9gppH55EVLNQbsOD8ywLtlzfLSGf3&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=18qV3_i391plVLxwhOxptR46Qp0I4Xqly&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1K89WpiXRy9bmWWzqW2Esutg8u36PPRMv&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Carving</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1wE0ykBWX1tv582USxUT0hM4fD7fpduLQ&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Lantern</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1zpIKUi8shSteuVOrDK7JsZ_XujL-c99E&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">L-Desk</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1BDh7E6s1TJsR7NNrRyOvoIM6qSH_ghPX&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">L-Desk</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1DZJ3igYdv5l4gyrQ4xaqX8KoWseEqTws&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1ZKQH-ccwOCgxiPF8Pg4eqP6EHLU3Aq9h&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1axfHwc-LRzrwYvdejum5cGtjs4ITH564&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1LaR-F9A6X4S-wLz0IZ8HI0wFAdSjannk&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1TkAiMUPxgNfOO1x3yIhdD_LiBInx8z2e&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="wood">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1fA3T4-RxNlgn2Cwi2XZlTlZiKejFsMvk&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Name Plaque</div>
+        <div class="gallery-caption-tag">Wood Carving</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="islamic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1vzaIxIFrOpEpJXVDf3PjTrChJSqATrjV&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Islamic Art</div>
+        <div class="gallery-caption-tag">Islamic Art</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=17yVWedF19cDhArSXrdUAqmd6eKUdTeHP&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Custom Piece</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="acrylic">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=1-14i-9DSK2-89xZxE22bdFGtJi-qygTb&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Acrylic Design</div>
+        <div class="gallery-caption-tag">Acrylic & Light</div>
+      </div>
+    </div>
+    <div class="gallery-item" data-cat="custom">
+      <div class="gallery-placeholder" style="background-image:url('https://drive.google.com/thumbnail?id=16evdKSB6hGNimlakgiLvx-zBBn9E3WCs&sz=w600');background-size:cover;background-position:center;">
+      </div>
+      <div class="gallery-caption">
+        <div class="gallery-caption-title">Number Plate</div>
+        <div class="gallery-caption-tag">Custom Design</div>
+      </div>
+    </div>
+  </div>
+</section>
