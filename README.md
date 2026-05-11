@@ -3,11 +3,22 @@
 Official website for SR Woodcraft & Designs — a Guyanese woodcraft business specialising in custom handmade pieces including name carvings, map puzzles, acrylic light art, Islamic art, license plates, stamps and more.
 
 ## Live Demo
+[sr-woodcraft-designs.netlify.app](https://sr-woodcraft-designs.netlify.app) 
 
-[Coming soon]
+Deployed with [Netlify](https://www.netlify.com)
 
 ## Screenshots
-
+### Home
+![Home Page](images/screenshot/1.png)
+ 
+### Our Work
+![Our Work](images/screenshot/2.png)
+ 
+### Custom Orders
+![Custom Orders](images/screenshot/customform.png)
+ 
+### Footer
+![Footer](images/screenshot/footer.png)
 
 ---
 
