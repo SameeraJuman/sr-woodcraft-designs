@@ -10,16 +10,504 @@
 <body>
 
   <!-- Navigation -->
-  <div id="nav-placeholder"></div>
+  <nav id="nav">
+    <a class="nav-logo" onclick="showPage('home')">
+      <svg class="nav-logo-svg" width="44" height="36" viewBox="0 0 340 280" aria-hidden="true">
+        <g transform="translate(170,155)">
+          <path d="M -110,0 A 110,110 0 0,1 110,0 Z" fill="#D4A853"/>
+          <polygon points="-110,0  -122,-12  -108,-20  -96,-8" fill="#D4A853"/>
+          <polygon points="-100,-47  -114,-56  -102,-70  -88,-58" fill="#D4A853"/>
+          <polygon points="-72,-84  -80,-100  -62,-106  -56,-88" fill="#D4A853"/>
+          <polygon points="-32,-104  -34,-122  -14,-122  -14,-104" fill="#D4A853"/>
+          <polygon points="10,-106  10,-124  30,-122  28,-104" fill="#D4A853"/>
+          <polygon points="52,-90  58,-108  76,-102  68,-84" fill="#D4A853"/>
+          <polygon points="84,-60  96,-72  108,-58  94,-48" fill="#D4A853"/>
+          <polygon points="80,-14  94,-22  100,-10  90,0" fill="#D4A853"/>
+          <path d="M -82,0 A 82,82 0 0,1 82,0 Z" fill="#2C1A0E"/>
+          <path d="M -56,0 A 56,56 0 0,1 56,0 Z" fill="#D4A853"/>
+          <path d="M -30,0 A 30,30 0 0,1 30,0 Z" fill="#2C1A0E"/>
+          <circle cx="0" cy="0" r="5" fill="#D4A853"/>
+          <rect x="-118" y="-5" width="236" height="10" rx="1" fill="#D4A853"/>
+        </g>
+      </svg>
+      <div class="nav-logo-text">
+        SR Woodcraft &amp; Designs
+        <span>Saw it. Designed it. Nailed it.</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a onclick="showPage('home');closeMenu()">Home</a></li>
+      <li><a onclick="showPage('gallery');closeMenu()">Our Work</a></li>
+      <li><a onclick="showPage('custom');closeMenu()">Custom Orders</a></li>
+      <li><a onclick="showPage('about');closeMenu()">About</a></li>
+      <li><a onclick="goToContact();closeMenu()">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  <!-- Pages -->
-  <div id="home-placeholder"></div>
-  <div id="gallery-placeholder"></div>
-  <div id="custom-orders-placeholder"></div>
-  <div id="about-placeholder"></div>
+  <!-- Home Page -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">Handcrafted in Guyana</p>
+        <h1 class="hero-title">SR Woodcraft<br><em>&amp; Designs</em></h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tagline">Saw it. Designed it. Nailed it.</p>
+        <div class="hero-btns">
+          <a class="hero-cta" onclick="showPage('gallery')">View Our Work &rarr;</a>
+          <a class="hero-cta-ghost" onclick="showPage('custom')">Order a Custom Piece</a>
+        </div>
+      </div>
+    </div>
+
+    <section class="crafts-section">
+      <p class="section-label">What we create</p>
+      <h2 class="section-title">Our Craft &amp; Specialties</h2>
+      <p class="section-intro">From intricate wood carvings to illuminated acrylic designs — if you can imagine it, we can craft it.</p>
+      <div class="crafts-grid">
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">Custom Carvings</h3>
+            <p class="craft-desc">Beautifully carved names and words in solid wood — perfect as personalised gifts or home décor pieces.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">01</span>
+          </div>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">Wooden Puzzles</h3>
+            <p class="craft-desc">Thoughtfully crafted puzzles featuring maps, art, landmarks, and more.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">02</span>
+          </div>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">Engraved Acrylic</h3>
+            <p class="craft-desc">Engraved acrylic designs for birthdays, anniversaries, Mother's Day, and more — with optional LED lighting.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">03</span>
+          </div>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">License Plates</h3>
+            <p class="craft-desc">High-quality custom license plates.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">04</span>
+          </div>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">Islamic Art</h3>
+            <p class="craft-desc">Quranic verses, Allah calligraphy, and geometric Islamic patterns — crafted with reverence and precision.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">05</span>
+          </div>
+        </div>
+
+        <div class="craft-card">
+          <div class="craft-card-top">
+            <div class="craft-svg-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="36" height="36"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div class="craft-photo"><div class="craft-photo-placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="1" width="28" height="28"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photo soon</span>
+            </div></div>
+          </div>
+          <div class="craft-card-body">
+            <h3 class="craft-name">Stamps &amp; More</h3>
+            <p class="craft-desc">Custom wooden stamps, signage, and one-of-a-kind pieces. If you have a design idea, we want to bring it to life.</p>
+          </div>
+          <div class="craft-card-footer">
+            <a class="craft-learn-btn" onclick="showPage('gallery')">Learn more</a>
+            <span class="craft-number">06</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <p class="section-label" style="color:var(--honey)">Got questions?</p>
+      <h2 class="section-title" style="color:var(--cream)">Common Questions</h2>
+      <p class="section-intro" style="color:rgba(232,220,200,0.5)">Helpful answers to your most important SR Woodcraft &amp; Designs questions.</p>
+      <div class="faq-grid">
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">How do I place a custom order?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Simply head to our Custom Orders page and fill in the quote request form — tell us what you have in mind, your preferred material, and any deadline. You can also reach us directly on WhatsApp and we'll guide you through the process.</p></div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">How long does an order take?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Turnaround time depends on the complexity of the piece. Simple carvings and stamps can be ready in 2–5 days, while detailed map puzzles or acrylic light art may take 1–2 weeks. We'll always give you an estimate when you enquire.</p></div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">Can I send my own design?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Absolutely! We love working from customer ideas. You can send sketches, images, or detailed descriptions via WhatsApp or the order form. If you have a digital file (PNG, SVG, PDF), even better — we'll work from it directly.</p></div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">What materials do you use?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>We primarily work with quality natural wood and acrylic (perspex). The type of wood or acrylic used depends on the design — we'll recommend the best material for your piece when you get in touch.</p></div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">Do you deliver outside of Guyana?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Currently we primarily serve customers in Guyana with local pickup and delivery. For international orders, please contact us on WhatsApp to discuss shipping options and costs for your location.</p></div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+          <div class="faq-question"><span class="faq-q-text">How much does a custom piece cost?</span><span class="faq-icon">+</span></div>
+          <div class="faq-answer"><p>Pricing varies based on size, material, and complexity. We offer competitive rates and will always provide a clear quote before starting any work. Use the Custom Orders form or WhatsApp us for a free quote.</p></div>
+        </div>
+
+      </div>
+    </section>
+  </section>
+
+  <!-- Gallery Page -->
+  <section class="page" id="page-gallery">
+    <div class="page-hero">
+      <p class="page-hero-label">Our portfolio</p>
+      <h1 class="page-hero-title">Our <em>Work</em></h1>
+      <p class="page-hero-sub">Browse a selection of our work.</p>
+    </div>
+    <div class="gallery-filter">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All Work</button>
+      <button class="filter-btn" onclick="filterGallery('wood', this)">Custom Carvings</button>
+      <button class="filter-btn" onclick="filterGallery('puzzle', this)">Wooden Puzzles</button>
+      <button class="filter-btn" onclick="filterGallery('acrylic', this)">Engraved Acrylic</button>
+      <button class="filter-btn" onclick="filterGallery('islamic', this)">Islamic Art</button>
+      <button class="filter-btn" onclick="filterGallery('custom', this)">Custom</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1YwPPeJX_fdd75FvLsfqrXafm-3Qu2Q5z');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Table</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1-8WAgeZ-Om0moUYWOrrtrdvEKqyYN4Ys');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Stamp</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1uPSycQZvMxm2awe9qDPYrGlHPjrsqFiT');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Stamp</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1id6S7AASvhltRSUZ3-PGnf6cf5keAXwV');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Stamp</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=16hK3vk9cQ8cL2a1vRhXOIRP1zNRp50An');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Sign</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="acrylic"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1yPauze3N9zkjzKbuRzygjZIhDFT0ENxQ');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Perspex Islamic Chain</div><div class="gallery-caption-tag">Acrylic &amp; Light</div></div></div>
+      <div class="gallery-item" data-cat="acrylic"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1rc8f7UibE-H6f-rVfMyLUgypBN785pYx');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Acrylic Light Art</div><div class="gallery-caption-tag">Acrylic &amp; Light</div></div></div>
+      <div class="gallery-item" data-cat="acrylic"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1r4tYYIJ7BlIb13GHF_9y6ODOVA03-L3R');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Acrylic Design</div><div class="gallery-caption-tag">Acrylic &amp; Light</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1OO0leVnt9KKhgnH2BvfVY7RQuFTX-JaI');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Carving</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=11l8vbF3XHFnasdJw7aI9PtEHOmoAd39i');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Tags</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1_BKQHqEwcWYrpXoQNo6m-nGZ8gP9YXTH');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Plaque</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1Ca5_D-lpKNVmKNUChNi9GJGqkP2g6fR_');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Plaque</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1LQV9gppH55EVLNQbsOD8ywLtlzfLSGf3');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Carving</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=18qV3_i391plVLxwhOxptR46Qp0I4Xqly');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Carving</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1K89WpiXRy9bmWWzqW2Esutg8u36PPRMv');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Carving</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1wE0ykBWX1tv582USxUT0hM4fD7fpduLQ');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Lantern</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1zpIKUi8shSteuVOrDK7JsZ_XujL-c99E');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">L-Desk</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1BDh7E6s1TJsR7NNrRyOvoIM6qSH_ghPX');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">L-Desk</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1DZJ3igYdv5l4gyrQ4xaqX8KoWseEqTws');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1ZKQH-ccwOCgxiPF8Pg4eqP6EHLU3Aq9h');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1axfHwc-LRzrwYvdejum5cGtjs4ITH564');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1LaR-F9A6X4S-wLz0IZ8HI0wFAdSjannk');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1TkAiMUPxgNfOO1x3yIhdD_LiBInx8z2e');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="wood"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1fA3T4-RxNlgn2Cwi2XZlTlZiKejFsMvk');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Name Plaque</div><div class="gallery-caption-tag">Wood Carving</div></div></div>
+      <div class="gallery-item" data-cat="islamic"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1vzaIxIFrOpEpJXVDf3PjTrChJSqATrjV');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Islamic Art</div><div class="gallery-caption-tag">Islamic Art</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=17yVWedF19cDhArSXrdUAqmd6eKUdTeHP');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Custom Piece</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+      <div class="gallery-item" data-cat="acrylic"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=1-14i-9DSK2-89xZxE22bdFGtJi-qygTb');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Acrylic Design</div><div class="gallery-caption-tag">Acrylic &amp; Light</div></div></div>
+      <div class="gallery-item" data-cat="custom"><div class="gallery-placeholder" style="background-image:url('https://drive.google.com/uc?export=view&id=16evdKSB6hGNimlakgiLvx-zBBn9E3WCs');background-size:cover;background-position:center;"></div><div class="gallery-caption"><div class="gallery-caption-title">Number Plate</div><div class="gallery-caption-tag">Custom Design</div></div></div>
+    </div>
+  </section>
+
+  <!-- Custom Orders Page -->
+  <section class="page" id="page-custom">
+    <div class="page-hero">
+      <p class="page-hero-label">Bring your vision to life</p>
+      <h1 class="page-hero-title">Custom <em>Orders</em></h1>
+      <p class="page-hero-sub">Have something specific in mind? Fill out the form and we'll get back to you with a quote.</p>
+    </div>
+    <div class="custom-layout">
+      <div class="custom-sidebar">
+        <h2 class="custom-sidebar-title">What can we make for you?</h2>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">Custom Carvings</div>
+          <div class="sidebar-item-desc">Any name, word or phrase — carved with precision into quality wood.</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">Wooden Puzzles</div>
+          <div class="sidebar-item-desc">Maps, art, landmarks and more — cut as unique wooden puzzles, educational and decorative.</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">Engraved Acrylic</div>
+          <div class="sidebar-item-desc">Engraved acrylic designs for birthdays, anniversaries, Mother's Day, and more — with optional LED lighting.</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">Islamic Art</div>
+          <div class="sidebar-item-desc">Calligraphy, geometric patterns, and Quranic verses crafted with care.</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">License Plates &amp; Stamps</div>
+          <div class="sidebar-item-desc">Personalised decorative plates and custom stamps for any occasion.</div>
+        </div>
+        <div class="sidebar-item">
+          <div class="sidebar-item-name">Something else?</div>
+          <div class="sidebar-item-desc">We love a challenge — describe your idea and we'll make it work.</div>
+        </div>
+      </div>
+      <div class="custom-form-area">
+        <h2 class="form-title">Request a Custom Quote</h2>
+        <p class="form-subtitle">We'll respond within 1–2 business days.</p>
+        <div id="orderForm">
+          <div class="form-row">
+            <div class="form-group"><label for="fname">First Name *</label><input type="text" id="fname" placeholder="Your first name"></div>
+            <div class="form-group"><label for="lname">Last Name</label><input type="text" id="lname" placeholder="Your last name"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="email">Email Address *</label><input type="email" id="email" placeholder="your@email.com"></div>
+            <div class="form-group"><label for="phone">Phone / WhatsApp</label><input type="tel" id="phone" placeholder="+592 ..."></div>
+          </div>
+          <div class="form-group">
+            <label for="product">Type of Piece *</label>
+            <select id="product">
+              <option value="">— Select a category —</option>
+              <option>Custom Carving</option>
+              <option>Wooden Puzzle</option>
+              <option>Engraved Acrylic</option>
+              <option>Islamic Art / Calligraphy</option>
+              <option>License Plate</option>
+              <option>Custom Stamp</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="occasion">Occasion (optional)</label>
+            <select id="occasion">
+              <option value="">— Select if applicable —</option>
+              <option>Birthday</option>
+              <option>Mother's Day</option>
+              <option>Wedding / Anniversary</option>
+              <option>Eid / Islamic Occasion</option>
+              <option>Home Décor</option>
+              <option>Business / Branding</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="details">Describe your idea *</label><textarea id="details" placeholder="Tell us what you have in mind — size, text, colours, style, anything that helps us understand your vision..."></textarea></div>
+          <div class="form-group">
+            <label style="margin-bottom:0.75rem">Materials (if you have a preference)</label>
+            <div class="checkbox-row"><input type="checkbox" id="mat1"><label for="mat1">Natural wood</label></div>
+            <div class="checkbox-row"><input type="checkbox" id="mat2"><label for="mat2">Acrylic / Perspex</label></div>
+            <div class="checkbox-row"><input type="checkbox" id="mat3"><label for="mat3">No preference — you decide!</label></div>
+          </div>
+          <div class="form-group"><label for="deadline">Do you have a deadline?</label><input type="text" id="deadline" placeholder="e.g. needed by Dec 25, or no rush"></div>
+          <button class="submit-btn" onclick="submitForm()">Send My Request &rarr;</button>
+          <div class="form-success" id="formSuccess">&#10003; &nbsp; Thank you! We've received your request and will be in touch shortly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Page -->
+  <section class="page" id="page-about">
+    <div class="about-hero">
+      <div class="about-portrait">
+        <div class="portrait-icon">&#129524;</div>
+        <div class="portrait-label">Photo coming soon</div>
+      </div>
+      <div class="about-content-dark">
+        <p class="page-hero-label">The craftsman behind the work</p>
+        <h1 class="about-name">SR<br><em>Woodcraft &amp; Designs</em></h1>
+        <p class="about-bio">Born from a love of working with natural materials, SR Woodcraft &amp; Designs started with a simple idea: that everyday objects should be made with care, creativity, and craft. Every piece that leaves our workshop is made by hand — measured, cut, shaped and finished with attention to every detail.</p>
+        <p class="about-bio">From intricate map puzzles that bring geography to life, to glowing acrylic light art that makes unforgettable gifts, we pour genuine passion into everything we create. Based in Guyana, we ship and deliver locally — and we love hearing the stories behind each custom order.</p>
+        <a class="hero-cta" onclick="showPage('custom')" style="display:inline-flex;margin-top:0.5rem;">Work with us &rarr;</a>
+      </div>
+    </div>
+
+    <div id="contact-section" class="contact-merged-section">
+      <div class="contact-intro-banner">
+        <p class="page-hero-label">Get in touch</p>
+        <h1 class="page-hero-title">Let's <em>Talk</em></h1>
+        <p class="page-hero-sub">Have a question, want to place an order, or just curious about what we can make? We'd love to hear from you.</p>
+      </div>
+      <div class="contact-layout">
+        <div class="contact-left">
+          <h2 class="contact-info-title">Reach us directly</h2>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="20" height="20"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Location</div>
+              <div class="contact-detail-value">Guyana, South America<br><small style="opacity:0.7">Local pickup &amp; delivery available</small></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="20" height="20"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">WhatsApp / Phone</div>
+              <div class="contact-detail-value"><a href="tel:+5926154413" class="contact-link">(+592) 615-4413</a></div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="20" height="20"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-value"><a href="mailto:njuman@gmail.com" class="contact-link">njuman@gmail.com</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
+          <h2 class="form-title">Send a Message</h2>
+          <p class="form-subtitle">Or jump straight to a custom order quote.</p>
+          <div style="margin-top:2rem">
+            <div class="form-group"><label for="cname">Your Name</label><input type="text" id="cname" placeholder="Full name"></div>
+            <div class="form-group"><label for="cemail">Email Address</label><input type="email" id="cemail" placeholder="your@email.com"></div>
+            <div class="form-group"><label for="cmsg">Message</label><textarea id="cmsg" placeholder="Ask us anything — about our work, pricing, turnaround time, or your idea..."></textarea></div>
+            <button class="submit-btn" onclick="submitContact()">Send Message &rarr;</button>
+            <div class="form-success" id="contactSuccess">&#10003; &nbsp; Message sent! We'll be in touch soon.</div>
+          </div>
+          <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid var(--ash)">
+            <p style="font-style:italic;color:var(--walnut);font-size:1rem;margin-bottom:1rem">Ready to order something custom?</p>
+            <a class="hero-cta" onclick="showPage('custom')" style="display:inline-flex">Request a Quote &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <div id="footer-placeholder"></div>
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <svg width="40" height="32" viewBox="0 0 340 280" aria-hidden="true">
+            <g transform="translate(170,155)">
+              <path d="M -110,0 A 110,110 0 0,1 110,0 Z" fill="#D4A853"/>
+              <polygon points="-110,0  -122,-12  -108,-20  -96,-8" fill="#D4A853"/>
+              <polygon points="-100,-47  -114,-56  -102,-70  -88,-58" fill="#D4A853"/>
+              <polygon points="-72,-84  -80,-100  -62,-106  -56,-88" fill="#D4A853"/>
+              <polygon points="-32,-104  -34,-122  -14,-122  -14,-104" fill="#D4A853"/>
+              <polygon points="10,-106  10,-124  30,-122  28,-104" fill="#D4A853"/>
+              <polygon points="52,-90  58,-108  76,-102  68,-84" fill="#D4A853"/>
+              <polygon points="84,-60  96,-72  108,-58  94,-48" fill="#D4A853"/>
+              <polygon points="80,-14  94,-22  100,-10  90,0" fill="#D4A853"/>
+              <path d="M -82,0 A 82,82 0 0,1 82,0 Z" fill="#1A0F07"/>
+              <path d="M -56,0 A 56,56 0 0,1 56,0 Z" fill="#D4A853"/>
+              <path d="M -30,0 A 30,30 0 0,1 30,0 Z" fill="#1A0F07"/>
+              <circle cx="0" cy="0" r="5" fill="#D4A853"/>
+              <rect x="-118" y="-5" width="236" height="10" rx="1" fill="#D4A853"/>
+            </g>
+          </svg>
+          SR Woodcraft &amp; Designs
+        </div>
+        <p class="footer-tagline">Custom woodcraft &amp; laser designs, handmade in Guyana with passion and precision.</p>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-services-list">
+          <li>Custom Carvings</li>
+          <li>Wooden Puzzles</li>
+          <li>Engraved Acrylic</li>
+          <li>Islamic Art &amp; Calligraphy</li>
+          <li>License Plates</li>
+          <li>Custom Stamps</li>
+          <li>Custom Designs</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <div class="footer-col-title">Contact Info</div>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.22 1.18 2 2 0 012.22 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l.66-.66a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+            <a href="tel:+5926154413" class="contact-link">(+592) 615-4413</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:njuman@gmail.com" class="contact-link">njuman@gmail.com</a>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#D4A853" stroke-width="2" width="18" height="18"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Guyana, South America
+          </li>
+        </ul>
+        <a href="https://wa.me/5926154413?text=Hi%2C%20I%20would%20like%20to%20order%20a%20custom%20piece%20from%20SR%20Woodcraft%20%26%20Designs" target="_blank" rel="noopener" class="footer-wa-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WHATSAPP US
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-links">
+        <a href="#">&#8250; Terms &amp; Conditions</a>
+        <a href="#">&#8250; Privacy Policy</a>
+      </div>
+      <div class="footer-copy">&copy; <span id="copyright-year"></span> SR Woodcraft &amp; Designs. All rights reserved.</div>
+    </div>
+  </footer>
 
   <!-- Scroll to top -->
   <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Scroll to top">
