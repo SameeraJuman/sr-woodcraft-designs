@@ -38,31 +38,26 @@ SR Woodcraft & Designs is a passion-driven woodcraft business based in Guyana. E
 - HTML5
 - CSS3 (custom, no framework)
 - Vanilla JavaScript
-- Component-based structure loaded via Fetch API
 
 ## Folder Structure
 
 ```
-sr-woodcraft/
+sr-woodcraft-designs/
 ├── index.html
+├── favicon.svg
 ├── README.md
 ├── css/
 │   └── styles.css
 ├── js/
 │   └── main.js
-├── components/
-│   ├── nav.html
-│   ├── home.html
-│   ├── gallery.html
-│   ├── custom-orders.html
-│   ├── about.html
-│   └── footer.html
 └── images/
+    ├── SR-img/        # Product & gallery photos (.webp)
+    └── screenshot/    # README screenshots
 ```
 
 ## Running Locally
 
-This project uses the Fetch API to load components dynamically. Opening `index.html` directly in the browser will not work — you need a local server.
+Open `index.html` directly in your browser, or use the Live Server extension in VS Code for auto-reload.
 
 **Using VS Code:**
 1. Install the Live Server extension
