@@ -117,11 +117,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const yearEl = document.getElementById("copyright-year");
     if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    const observer = new IntersectionObserver(function (entries, obs) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                const bg = el.dataset.bg;
+                if (bg) el.style.backgroundImage = "url('" + bg + "')";
+                obs.unobserve(el);
+            }
+        });
+    }, { rootMargin: "200px" });
+
     document.querySelectorAll(".gallery-placeholder").forEach(function (el) {
         const style = el.getAttribute("style") || "";
         const match = style.match(/url\(['"]?([^'")\s]+)['"]?\)/);
         if (match) {
+            el.dataset.bg = match[1];
+            el.style.backgroundImage = "none";
             el.addEventListener("click", function () { openLightbox(match[1]); });
+            observer.observe(el);
         }
     });
 });
