@@ -83,13 +83,24 @@ function submitContact() {
     const name = document.getElementById("cname").value.trim();
     const email = document.getElementById("cemail").value.trim();
     const msg = document.getElementById("cmsg").value.trim();
+
     if (!name || !email || !msg) {
         alert("Please fill in all fields.");
         return;
     }
-    document.getElementById("contactSuccess").style.display = "block";
-    document.querySelector(".contact-right .submit-btn").disabled = true;
-    document.querySelector(".contact-right .submit-btn").style.opacity = "0.5";
+
+    const lines = [
+        "Hi SR Woodcraft & Designs! I have a message for you.",
+        "",
+        "*Name:* " + name,
+        "*Email:* " + email,
+        "",
+        "*Message:*",
+        msg,
+    ];
+
+    const message = encodeURIComponent(lines.join("\n"));
+    window.open("https://wa.me/5926154413?text=" + message, "_blank");
 }
 
 function openLightbox(src) {
